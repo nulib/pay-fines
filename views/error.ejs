@@ -1,0 +1,27 @@
+<% include partials/header %>
+
+<main>
+	<div class="content container">
+		<div class="row">
+			<div class="col">
+			    <% if(error && error.length > 0){ %>
+			        <div class="alert alert-danger" role="alert">
+			            <%= error %>
+			        </div>
+			    <% } %>
+			    <% if(success && success.length > 0){ %>
+			        <div class="alert alert-success" role="alert">
+			            <%= success %>
+			        </div>
+			    <% } %>
+		    </div>
+	    </div>
+	    <div class="row">
+		    <div class="col text-center">
+				<a class="btn btn-primary" role="button" href="https://search.library.northwestern.edu/primo-explore/account?vid=NULVNEW&lang=en_US">Return to NUsearch</a>
+		    </div>
+	    </div>
+	</div>
+</main>
+
+<% include partials/footer %>
