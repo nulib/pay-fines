@@ -11,8 +11,8 @@ const express = require("express"),
 	  finesRoutes = require("./routes/fines");
 
 const sslCerts = {
-	key: fs.readFileSync("/etc/httpd/sslcert/discoweb1-p.library.2018.key"),
-	cert: fs.readFileSync("/etc/httpd/sslcert/discoweb1-p.library.2018.crt")
+	key: fs.readFileSync(process.env.SSL_KEY),
+	cert: fs.readFileSync(process.env.SSL_CERT)
 };
 	  
 require("dotenv").config();
