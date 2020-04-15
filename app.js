@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express"),
       app = express(),
       https = require("https"),
@@ -15,7 +17,6 @@ const sslCerts = {
 	cert: fs.readFileSync(process.env.SSL_CERT)
 };
 	  
-require("dotenv").config();
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(session({
